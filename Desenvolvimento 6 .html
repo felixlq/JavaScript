@@ -1,0 +1,43 @@
+ 
+<!DOCTYPE html>
+<html lang="pt-BR   ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softex Academy</title>
+</head>
+<body>
+    <h1>Verificação de Aprovação</h1>
+    <p>Média para aprovação: <strong>7.0<strong></p>
+    <p>Primeira Avaliação: <input type="number" name="nota1" id="txtnota1"></p>
+    <p>Segunda Avaliação: <input type="number" name="nota2" id="txtnota2"></p>
+    <p>Terceira Avaliação: <input type="number" name="nota3" id="txtnota3"></p>
+    <input type="button" value="Média 7" onclick="verificaSete()">
+    <input type="button" value="Resultado" onclick="verificaAprovacao()">
+    
+
+    <script>
+        function verificaAprovacao(){
+            var avaliacao1 = document.getElementById("txtnota1") // coleta os inputs dados nas caixas
+            var avaliacao2 = document.getElementById("txtnota2") // 
+            var avaliacao3 = document.getElementById("txtnota3") // 
+            var avaliacao1 = Number(txtnota1.value) // Transforma o valor dos inputs de String para Number
+            var avaliacao2 = Number(txtnota2.value) // 
+            var avaliacao3 = Number(txtnota3.value) // 
+            var media = (avaliacao1 + avaliacao2 + avaliacao3) / 3 //verifica a média do aluno
+            var resultado = media >= 7 ? "Aprovado" : "Reprovado"// Teste lógico ternário
+            window.alert(`Situação do Aluno : ${resultado}`) // Apresenta o resultado
+        }
+
+        function verificaSete() {
+            var avaliacao1 = document.getElementById("txtnota1") // coleta os inputs dados nas caixas
+            var avaliacao2 = document.getElementById("txtnota2")
+            var avaliacao1 = Number(txtnota1.value)
+            var avaliacao2 = Number(txtnota2.value)
+            var mediaInicial = 21 - (avaliacao1 + avaliacao2) 
+            window.alert(`Precisa de ${mediaInicial} para passar por média!`) // Apresenta o resultado 
+        }
+    </script>    
+</body>
+</html>
