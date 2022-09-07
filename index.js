@@ -1,0 +1,13 @@
+var readlineSync = require('readline-sync')
+nome = readlineSync.question('Digite seu nome: ')
+var nota1 = readlineSync.question('Digite a primeira nota: ')
+var nota2 = readlineSync.question('Digite a segunda nota: ')
+var nota3 = readlineSync.question('Digite a terceira nota: ')
+avaliacao1 = parseFloat(nota1)
+avaliacao2 = parseFloat(nota2)
+avaliacao3 = parseFloat(nota3)
+var media = (avaliacao1 + avaliacao2 + avaliacao3)/3
+media.toFixed(2)
+console.log(`Sua média é ${media}`)
+var Resultado = media>= 7?(`${nome} Parabéns você foi Aprovado!`):(`${nome} Infelismente você foi Reprovado!`) 
+console.log(Resultado)
