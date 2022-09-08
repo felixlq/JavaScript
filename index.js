@@ -1,5 +1,5 @@
 var readlineSync = require('readline-sync')
-nome = readlineSync.question('Digite seu nome: ')
+var nome = readlineSync.question('Digite seu nome: ')
 var nota1 = readlineSync.question('Digite a primeira nota: ')
 var nota2 = readlineSync.question('Digite a segunda nota: ')
 var nota3 = readlineSync.question('Digite a terceira nota: ')
