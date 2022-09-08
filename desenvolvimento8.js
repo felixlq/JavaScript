@@ -6,13 +6,13 @@ var num1 = Number(inputnum1)//convertendo String em Number
 var num2 = Number(inputnum2)//
 
 //Function retornando valor do operador a ser utilizado 
-function inputOperador(){
+function inputOperador() {
     return readlineSync.question('Selecione a operacao que voce deseja realizar: [+ , - , x , /] ')
 }
 
 //Function para determinar qual operação será realizada
-function calculadora(){
-    switch(inputOperador()) { //Chamada da função inputOperador
+function calculadora() {
+    switch (inputOperador()) { //Chamada da função inputOperador
         case '+':
             soma(num1, num2)
             break
@@ -24,9 +24,9 @@ function calculadora(){
             break
         case '/':
             divi(num1, num2)
-            break        
+            break
+    }
 }
-}    
 
 //Arrow Functions para cálculo das operações
 var soma = (a, b) => console.log(num1 + num2)
